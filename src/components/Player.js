@@ -23,6 +23,11 @@ const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
         setSongInfo({ ...songInfo, currentTime: currTime, durationTime: duraTime });
     };
 
+    const dragHandler = (e) => {
+        audioRef.current.currentTime = e.target.value;
+        setSongInfo({ ...songInfo, currentTime: e.target.value });
+    };
+
     // Normal Functions
     const formatTime = (time) => {
         return Math.floor(time / 60) + ':' + ('0' + Math.floor(time % 60)).slice(-2);
@@ -30,15 +35,15 @@ const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
 
     // useSate variable
     const [songInfo, setSongInfo] = useState({
-        currentTime: null,
-        durationTime: null,
+        currentTime: 0,
+        durationTime: 0,
     });
 
     return (
         <div className="player">
             <div className="time-control">
                 <p>{formatTime(songInfo.currentTime)}</p>
-                <input min={0} type="range" value={songInfo.currentTime} max={songInfo.durationTime} />
+                <input onChange={dragHandler} min={0} max={songInfo.durationTime} value={songInfo.currentTime} type="range" />
                 <p>{formatTime(songInfo.durationTime)}</p>
             </div>
             <div className="play-control">
