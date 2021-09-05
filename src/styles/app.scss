@@ -1,0 +1,35 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    color: rgb(55, 55, 55);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.App {
+    transition: all 0.6s ease;
+}
+
+.library-active {
+    margin-left: 35%;
+}
+
+h3,
+h4 {
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+}
+
+@import './player';
+@import './song';
+@import './library';
+@import './nav';
