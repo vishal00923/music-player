@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Music-Player App
 
-<img src="app-preview.png" width="60%" height="60%" />
+<img src="https://i.ibb.co/PQVrK0b/Screenshot-2023-01-04-221813.png" alt="Screenshot-2023-01-04-221813" border="0">
 
 ## Try It
 
